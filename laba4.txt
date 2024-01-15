@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(0, "");
+	cout << "Введите число: ";
+	int digit = 0;
+	cin >> digit;
+	int answer = 0;
+	int _;
+	
+
+	for (int count = 1; count <= 9; ++count) {
+	     cout << "Решите пример: " << digit << " x " << count << "= ";
+	     cin >> answer;
+		 if (answer == digit * count) {
+			 cout << "Пример решен правильно!" << "\n";
+		 }
+		 else {
+			 cout << "Пример решен неверно";
+			 break;
+			 
+		 }
+	}
+	cin >> _;
+	if (answer == digit * 9) {
+		cout << "Примеры решены, поздравляю!";
+		
+	}
+	else
+		return 0; 
+	
+	cin >> _;
+}
